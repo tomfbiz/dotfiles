@@ -12,6 +12,9 @@
   co = checkout
   pf = push --force-with-lease
   st = status
+  browse = !hub browse
+  compare = !hub compare
+  issues = !hub browse --issues
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
@@ -25,3 +28,10 @@
   autosquash = true
 [include]
   path = ~/.gitconfig.local
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Tom Freudenheim
+	email = tomfreudenheim@me.com
